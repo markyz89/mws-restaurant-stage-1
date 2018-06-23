@@ -55,6 +55,13 @@ header {
   background-color: #252831;
   text-align:center;
 }
+
+@media screen and (max-width: 462px) {
+  header {
+    height: 120px;  
+  }
+}
+
 header h1 {
   margin: auto;
   padding: 25px;
@@ -112,6 +119,14 @@ header h1 a {
   align-items: center;
   padding: 20px;
 }
+
+@media screen and (max-width: 460px) {
+  .filter-options {
+    height: 110px;
+  }
+}
+
+
 .filter-options h2 {
   color: white;
   font-size: 1rem;
@@ -164,6 +179,18 @@ header h1 a {
 @media screen and (max-width: 1060px) {
   #restaurants-list li {
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 405px) {
+  #restaurants-list li {
+    margin: 15px 0;
+  }
+}
+
+@media screen and (max-width: 405px) {
+  #restaurants-list li {
+    padding: 0 15px 25px;
   }
 }
 
