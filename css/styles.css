@@ -81,6 +81,8 @@ header h1 a {
     font-size: 17px;
     margin: 0;
     width: calc(50% - 80px);
+    position: fixed;
+    top: 80px; 
 }
 
 /* Display list items side by side */
@@ -301,7 +303,9 @@ header h1 a {
   #reviews-container {
     width: 40%;
   }
+
 }
+
 
 @media screen and (max-width: 650px) {
   .inside #map-container {
@@ -348,9 +352,35 @@ header h1 a {
   position: relative;
   width: 85%;
 }
+
+@media screen and (min-width: 1000px) {
+#reviews-list li {
+    width: 80%
+  }
+}
+
+@media screen and (max-width: 1000px) {
+#reviews-list li {
+    width: 90%
+  }
+}
+
+@media screen and (max-width: 650px) {
+#reviews-list li {
+    width: 80%
+  }
+ #reviews-container {
+  width: 85%;
+ } 
+}
+
 #reviews-list li p {
   margin: 0 0 10px;
 }
 #restaurant-hours td {
   color: #666;
+}
+
+div.leaflet-control-container .leaflet-top {
+  z-index: 999;
 }
