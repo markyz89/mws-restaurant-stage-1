@@ -39,6 +39,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   background-color: #f3f3f3;
   min-height: 100%;
 }
+
 #footer {
   background-color: #444;
   color: #aaa;
@@ -245,6 +246,8 @@ header h1 a {
   top: 80px;
   width: 50%;
 }
+
+
 .inside #map {
   background-color: #ccc;
   height: 100%;
@@ -290,6 +293,36 @@ header h1 a {
   padding: 140px 40px 30px;
   width: 50%;
 }
+
+@media screen and (max-width: 1000px) {
+  #restaurant-container, #map-container {
+    width: 45%;
+  }
+  #reviews-container {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .inside #map-container {
+    position: relative;
+    height: 250px;
+    width: 100%;
+    /*z-index: 2;*/
+  }
+  #restaurant-container {
+    position: relative;
+    padding: 120px 40px 30px;
+  }
+  #restaurant-container, #reviews-container {
+    width: 100%;
+  }
+  #reviews-container {
+    z-index: 0;
+  }
+}
+
+
 #reviews-container {
   padding: 30px 40px 80px;
 }
