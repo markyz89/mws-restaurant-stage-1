@@ -85,6 +85,8 @@ header h1 a {
     top: 80px; 
 }
 
+
+
 /* Display list items side by side */
 #breadcrumb li {
     display: inline;
@@ -297,7 +299,7 @@ header h1 a {
 }
 
 @media screen and (max-width: 1000px) {
-  #restaurant-container, #map-container {
+  #restaurant-container, .inside#map-container {
     width: 45%;
   }
   #reviews-container {
@@ -383,4 +385,16 @@ header h1 a {
 
 div.leaflet-control-container .leaflet-top {
   z-index: 999;
+}
+
+@media all and (max-width: 650px) {
+  #breadcrumb {
+    position: relative;
+    top: -10px;
+    width: 100%;
+  }
+  .inside #map-container {
+    top: 130px;
+    margin-bottom: 20px;
+  }
 }
