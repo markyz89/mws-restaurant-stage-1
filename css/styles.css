@@ -142,7 +142,7 @@ header h1 a {
 }
 
 
-.filter-options h2 {
+.filter-options h3 {
   color: white;
   font-size: 1rem;
   font-weight: normal;
@@ -160,6 +160,25 @@ header h1 a {
   padding: 0 10px;
   width: 200px;
 }
+
+.skip-map {
+  position: absolute;
+  left: -1000px;
+}
+
+a.skip-map:focus {
+  position: relative;
+  left: 0;
+}
+
+#neighborhoods-select:focus, #cuisines-select:focus {
+/*  background-color: #7A4D00;
+  color: white;*/
+  /*outline-color: orange;*/
+  border: 5px solid orange;
+  /*box-shadow: 0 0 10px orange;*/
+}
+
 
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
@@ -218,7 +237,7 @@ header h1 a {
   min-height: auto;
   min-width: 100%;
 }
-#restaurants-list li h1 {
+#restaurants-list li h2 {
   color: #7A4D00;
   font-family: Arial,sans-serif;
   font-size: 14pt;
@@ -252,13 +271,25 @@ header h1 a {
   width: 100%;
   z-index: 1000;
 }
+
+.inside #maincontent {
+  display: flex;
+  flex-direction: column;
+}
+
 .inside #map-container {
-  background: blue none repeat scroll 0 0;
+  background: #fff none repeat scroll 0 0;
   height: 87%;
   position: fixed;
   right: 0;
   top: 80px;
   width: 50%;
+}
+
+@media all and (max-width: 650px) {
+  .inside #map-container {
+    order: -1;
+  }
 }
 
 
@@ -405,11 +436,17 @@ div.leaflet-control-container .leaflet-top, div.leaflet-control-container  .leaf
     width: 100%;
   }
   .inside #map-container {
-    top: 165px;
-    margin-bottom: 125px;
+    top: 130px;
+    margin-bottom: 40px;
   }
   .inside #footer {
     width: 100%;
+  }
+}
+
+@media all and (max-width: 462px) {
+  .inside #map-container {
+    top: 170px;
   }
 }
 
