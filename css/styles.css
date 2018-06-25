@@ -49,6 +49,12 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   text-align: center;
   text-transform: uppercase;
 }
+
+#footer p {
+  color: #aaa;
+  font-size: 1em;
+  padding: 0 5%;
+}
 /* ====================== Header area ====================== */
 header {
   width: 100%;
@@ -260,7 +266,8 @@ header h1 a {
 .inside #footer {
   bottom: 0;
   position: absolute;
-  width: 50%;
+  width: 44%;
+  padding: 3% 3% 3%;
 }
 #restaurant-name {
   color: #f18200;
@@ -369,7 +376,7 @@ header h1 a {
 
 @media screen and (max-width: 650px) {
 #reviews-list li {
-    width: 80%
+    width: 85%
   }
  #reviews-container {
   width: 85%;
@@ -383,7 +390,7 @@ header h1 a {
   color: #666;
 }
 
-div.leaflet-control-container .leaflet-top {
+div.leaflet-control-container .leaflet-top, div.leaflet-control-container  .leaflet-bottom {
   z-index: 999;
 }
 
@@ -394,7 +401,22 @@ div.leaflet-control-container .leaflet-top {
     width: 100%;
   }
   .inside #map-container {
-    top: 130px;
-    margin-bottom: 20px;
+    top: 165px;
+    margin-bottom: 125px;
   }
+  .inside #footer {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 750px) {
+  #restaurant-container {
+    padding: 40px 20px 30px;
+    margin-top: 85px;
+  }
+  
+  #reviews-container {
+    padding: 40px 20px 80px;
+  }
+
 }
