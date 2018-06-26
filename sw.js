@@ -1,4 +1,6 @@
 self.addEventListener('install', function(event) {
+	
+// adding all the websites assets to be cached
 	var urlsToCache = [
 		'/',
 		'js/dbhelper.js',
@@ -20,6 +22,7 @@ self.addEventListener('install', function(event) {
 		'restaurant.html?id=10',
 	];
 
+// adds to cache
 	event.waitUntil(
 		caches.open('restaurant-reviews-v1').then(function(cache) {
 			return cache.addAll(urlsToCache);
@@ -28,10 +31,11 @@ self.addEventListener('install', function(event) {
 });
 
 
+// checks for data in cache before making normal browser request
 self.addEventListener('fetch', function(event) {
 	// console.log('yo everyone',event.request);
 	// event.respondWith(
-	// 	new Response('shit I broke my site')
+	// 	new Response('oops I broke my site')
 	// );
 
 	event.respondWith(

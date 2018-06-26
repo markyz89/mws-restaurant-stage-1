@@ -13,7 +13,7 @@
 <body class="inside">
   <!-- Beginning header -->
   <header>
-    <!-- Beginning nav --> <!---not a nav--->
+    <!-- Beginning nav --> <!---not a nav, nav removed--->
     
       <h1><a href="/">Restaurant Reviews</a></h1>
 
@@ -31,6 +31,7 @@
      
     <!-- Beginning restaurant -->
     <section id="restaurant-container">
+      <!-- Added tabindedxes to give screen readers easier access to content -->
       <h2 id="restaurant-name" tabindex="0"></h2>
       <img id="restaurant-img">
       <p id="restaurant-cuisine" tabindex="0"></p>
@@ -47,7 +48,6 @@
      <section id="map-container">
       
         <div id="map" aria-label="Restaurant location on map"></div>
-      <!-- <a href="#restaurant-name" class="skip-map">Skip Map</a> -->
     </section>
     <!-- End map -->
   </main>
@@ -55,6 +55,7 @@
 
   <!-- Beginning footer -->
   <footer id="footer">
+    <!-- Easier to make text responsive in a p tag -->
     <p>
       Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
     </p>

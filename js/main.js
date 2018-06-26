@@ -32,6 +32,7 @@ fetchNeighborhoods = () => {
  */
 fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
   const select = document.getElementById('neighborhoods-select');
+  // labelled the filter options to make it clearer what they are
   select.setAttribute('aria-label', 'Filter by neighbourhood');
   neighborhoods.forEach(neighborhood => {
     const option = document.createElement('option');
@@ -60,6 +61,7 @@ fetchCuisines = () => {
  */
 fillCuisinesHTML = (cuisines = self.cuisines) => {
   const select = document.getElementById('cuisines-select');
+  // labelled the filter options to make it clearer what they are
   select.setAttribute('aria-label', 'Filter by cuisine');
 
   cuisines.forEach(cuisine => {
@@ -163,6 +165,7 @@ createRestaurantHTML = (restaurant) => {
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  // added alt tag to all restaurant images with the restaurant's name included
   image.setAttribute('alt','Image of '+restaurant.name);
   li.append(image);
 
@@ -216,6 +219,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 
 
 // Service Worker
+// code to register the service worker
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker
